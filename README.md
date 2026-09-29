@@ -29,6 +29,8 @@ Desafio de SQL (DQL) sobre o Olist Brazilian E-Commerce Public Dataset
 - Faixas de cliente (bronze/prata/ouro) e de peso (leve/médio/pesado)
   são limites definidos por mim e estão comentados nos scripts.
 - "Volume relevante" de avaliações = pelo menos 100 por categoria.
+- No PostgreSQL, as "procedures" de leitura do bloco H foram criadas como
+  `FUNCTION`, pois é o objeto que retorna tabelas.
 
 ## Principais insights
 - **Estado líder:** SP concentra o maior faturamento, com R$ 5.202.955,05.
@@ -37,15 +39,4 @@ Desafio de SQL (DQL) sobre o Olist Brazilian E-Commerce Public Dataset
   tradução). Um JOIN comum esconderia esses produtos; o LEFT JOIN os mantém.
 - **Pagamento:** cartão de crédito domina, com 76.505 pedidos, contra 19.784
   de boleto, 3.866 de voucher e 1.528 de débito.
-- **Parcelamento:** computers é a categoria com mais parcelas em média (5,98).
-- **Logística:** 36,1% dos pedidos têm cliente e vendedor no mesmo estado;
-  a maior parte das vendas cruza estados, o que pesa no frete.
-- **Peso:** furniture_mattress_and_upholstery tem o maior peso médio (13.190 g).
-- **Vendedores:** 342 vendedores têm nota média de avaliação abaixo de 3.
-- **Entrega:** [PREENCHER: quantidade e % de pedidos entregues com atraso]
-- **Reputação:** [PREENCHER: categoria com pior nota e valor]
-- **Frete:** [PREENCHER: estado com frete médio mais alto e valor]
-
-## Uso de IA
-Usei IA como apoio para estruturar as consultas. Executei todas no DBeaver,
-conferi os resultados e as decisões de análise acima são minhas.
+-
